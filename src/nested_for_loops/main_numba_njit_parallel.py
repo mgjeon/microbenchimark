@@ -1,6 +1,6 @@
 from numba import njit, prange
 
-@njit(parallel=True, fastmath=True)
+@njit(parallel=True)
 def compute_result(n):
     result = 0.0
     for i in prange(1, n + 1):
