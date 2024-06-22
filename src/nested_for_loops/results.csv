@@ -1,0 +1,50 @@
+Language,Method,Time (seconds)
+Fortran 90,gfortran,26.0444774
+Fortran 90,gfortran O3,6.5366842
+Fortran 90,gfortran Ofast,6.5269219
+Fortran 90,ifx,0.2548151
+Fortran 90,ifx O3,0.2505836
+Fortran 90,ifx Ofast,0.2478418
+Fortran 90 (OpenMP),gfortran,2.4242581
+Fortran 90 (OpenMP),gfortran O3,0.6269447
+Fortran 90 (OpenMP),gfortran Ofast,0.6085612
+Fortran 90 (OpenMP),ifx,0.072703
+Fortran 90 (OpenMP),ifx O3,0.0691564
+Fortran 90 (OpenMP),ifx Ofast,0.0732488
+C,gcc,26.3443985
+C,gcc O3,6.9182992
+C,gcc Ofast,6.9253153
+C,icx,1.0256507
+C,icx O3,1.0256812
+C,icx Ofast,1.0200478
+C (OpenMP),gcc,2.4285886
+C (OpenMP),gcc O3,0.6385499
+C (OpenMP),gcc Ofast,0.5790856
+C (OpenMP),icx,0.068019
+C (OpenMP),icx O3,0.0704999
+C (OpenMP),icx Ofast,0.0670927
+C++,g++,26.401219
+C++,g++ O3,6.9196242
+C++,g++ Ofast,6.9220773
+C++,icx,1.0162431
+C++,icx O3,1.0250595
+C++,icx Ofast,1.0419863
+C++ (OpenMP),g++,2.4134914
+C++ (OpenMP),g++ O3,0.6407591
+C++ (OpenMP),g++ Ofast,0.6015819
+C++ (OpenMP),icx,0.0723325
+C++ (OpenMP),icx O3,0.068145
+C++ (OpenMP),icx Ofast,0.0702521
+Python,CPython 3.11,602.3268111
+Python,PyPy 3.9,26.4979164
+Python (Cython),Cython,6.5555665
+Python (Taichi),CPU,0.8254668
+Python (Taichi),CUDA,1.1928701
+Python (Numba),JIT,7.2332068
+Python (Numba),NJIT,7.2360433
+Python (Numba),NJIT fastmath,0.7631187
+Python (Numba),NJIT parallel,1.587935
+Python (Numba),NJIT parallel fastmath,1.0922346
+Python (Numba),CUDA,17.6345317
+Julia,Serial,6.7699559
+Julia,Parallel,0.9933752
