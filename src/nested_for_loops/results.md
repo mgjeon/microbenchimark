@@ -609,25 +609,104 @@ TotalMilliseconds : 17634.5317
 
 ## Julia
 
+`> $Env:JULIA_NUM_THREADS = "auto"`
+
 ```
 > Measure-Command { julia main.jl | Out-Default }
 Result: 100000.02207306116
-Ticks             : 67699559
-TotalDays         : 7.83559710648148E-05
-TotalHours        : 0.00188054330555556
-TotalMinutes      : 0.112832598333333
-TotalSeconds      : 6.7699559
-TotalMilliseconds : 6769.9559
+Ticks             : 67472503
+TotalDays         : 7.80931747685185E-05
+TotalHours        : 0.00187423619444444
+TotalMinutes      : 0.112454171666667
+TotalSeconds      : 6.7472503
+TotalMilliseconds : 6747.2503
 ```
 
 ```
-> $Env:JULIA_NUM_THREADS = "auto"
-> Measure-Command { julia main_parallel.jl | Out-Default }
+> Measure-Command { julia main_simd.jl | Out-Default }
+Result: 100000.00137956644
+Ticks             : 6864702
+TotalDays         : 7.94525694444444E-06
+TotalHours        : 0.000190686166666667
+TotalMinutes      : 0.01144117
+TotalSeconds      : 0.6864702
+TotalMilliseconds : 686.4702
+```
+
+```
+> Measure-Command { julia main_fastmath.jl | Out-Default }
+Result: 99999.99991278863
+Ticks             : 3132524
+TotalDays         : 3.62560648148148E-06
+TotalHours        : 8.70145555555556E-05
+TotalMinutes      : 0.00522087333333333
+TotalSeconds      : 0.3132524
+TotalMilliseconds : 313.2524
+```
+
+```
+> Measure-Command { julia main_threads.jl | Out-Default }
 Result: 99999.99999991048
-Ticks             : 9933752
-TotalDays         : 1.14973981481481E-05
-TotalHours        : 0.000275937555555556
-TotalMinutes      : 0.0165562533333333
-TotalSeconds      : 0.9933752
-TotalMilliseconds : 993.3752
+Ticks             : 8966069
+TotalDays         : 1.03773946759259E-05
+TotalHours        : 0.000249057472222222
+TotalMinutes      : 0.0149434483333333
+TotalSeconds      : 0.8966069
+TotalMilliseconds : 896.6069
+```
+
+```
+> Measure-Command { julia main_threads_fastmath.jl | Out-Default }
+Result: 99999.99999999999
+Ticks             : 3424389
+TotalDays         : 3.96341319444444E-06
+TotalHours        : 9.51219166666667E-05
+TotalMinutes      : 0.005707315
+TotalSeconds      : 0.3424389
+TotalMilliseconds : 342.4389
+```
+
+```
+> Measure-Command { julia main_threads_inbounds.jl | Out-Default }
+Result: 99999.99999991048
+Ticks             : 8966765
+TotalDays         : 1.03782002314815E-05
+TotalHours        : 0.000249076805555556
+TotalMinutes      : 0.0149446083333333
+TotalSeconds      : 0.8966765
+TotalMilliseconds : 896.6765
+```
+
+```
+> Measure-Command { julia main_threads_simd.jl | Out-Default }
+Result: 100000.00000000036
+Ticks             : 3843874
+TotalDays         : 4.44892824074074E-06
+TotalHours        : 0.000106774277777778
+TotalMinutes      : 0.00640645666666667
+TotalSeconds      : 0.3843874
+TotalMilliseconds : 384.3874
+```
+
+```
+> Measure-Command { julia main_threads_inbounds_simd.jl | Out-Default }
+Result: 100000.00000000036
+Ticks             : 3814411
+TotalDays         : 4.4148275462963E-06
+TotalHours        : 0.000105955861111111
+TotalMinutes      : 0.00635735166666667
+TotalSeconds      : 0.3814411
+TotalMilliseconds : 381.4411
+```
+
+
+```
+> Measure-Command { julia main_loopvec.jl | Out-Default }
+Result: 99999.99993092171
+Ticks             : 14907689
+TotalDays         : 1.72542696759259E-05
+TotalHours        : 0.000414102472222222
+TotalMinutes      : 0.0248461483333333
+TotalSeconds      : 1.4907689
+TotalMilliseconds : 1490.7689
 ```

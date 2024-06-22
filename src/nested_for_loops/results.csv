@@ -46,5 +46,13 @@ Python (Numba),NJIT fastmath,0.7631187
 Python (Numba),NJIT parallel,1.587935
 Python (Numba),NJIT parallel fastmath,1.0922346
 Python (Numba),CUDA,17.6345317
-Julia,Serial,6.7699559
-Julia,Parallel,0.9933752
+Julia,default,6.7472503
+Julia,simd,0.6864702
+Julia,fastmath,0.3132524
+Julia,threads,0.8966069
+Julia,threads fastmath,0.3424389
+Julia,threads inbounds,0.8966765
+Julia,threads simd,0.3843874
+Julia,threads inbounds simd,0.3814411
+Julia,loopvec,1.4907689
+
