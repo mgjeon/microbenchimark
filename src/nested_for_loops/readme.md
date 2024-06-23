@@ -700,15 +700,3 @@ TotalMinutes      : 0.00635735166666667
 TotalSeconds      : 0.3814411
 TotalMilliseconds : 381.4411
 ```
-
-
-```
-> Measure-Command { julia main_loopvec.jl | Out-Default }
-Result: 99999.99993092171
-Ticks             : 14907689
-TotalDays         : 1.72542696759259E-05
-TotalHours        : 0.000414102472222222
-TotalMinutes      : 0.0248461483333333
-TotalSeconds      : 1.4907689
-TotalMilliseconds : 1490.7689
-```

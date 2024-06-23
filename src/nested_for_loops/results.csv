@@ -54,5 +54,4 @@ Julia,threads fastmath,0.3424389
 Julia,threads inbounds,0.8966765
 Julia,threads simd,0.3843874
 Julia,threads inbounds simd,0.3814411
-Julia,loopvec,1.4907689
 
