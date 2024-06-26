@@ -1,10 +1,8 @@
-# Environment
+# Windows 11
 
-Windows 11
+## Fortran, C/C++
 
-# Fortran, C/C++
-
-## GNU Compiler (gfortran, gcc, g++)
+### GNU Compiler (gfortran, gcc, g++)
 
 Install [MSYS2](https://www.msys2.org/) and run `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain` & `pacman -S mingw-w64-ucrt-x86_64-gcc-fortran` in MSYS2 UCRT64 terminal. Add `C:\msys64\ucrt64\bin` to the system PATH.
 
@@ -12,22 +10,25 @@ Install [MSYS2](https://www.msys2.org/) and run `pacman -S --needed base-devel m
 
 [C/C++ tutorial](https://code.visualstudio.com/docs/cpp/config-mingw)
 
-## Intel Compiler (ifx, icx)
+### Intel Compiler (ifx, icx)
 
 [Intel oneAPI Base Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit.html)
 
 [Intel oneAPI HPC Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit.html)
 
-Run `"C:\Program Files (x86)\Intel\oneAPI\setvars.bat"` to set the environment variables.
+Run `etvars.bat` to set the environment variables.
 
-In Windows, you need to install `Desktop development with C++` in [Visual Studio](https://visualstudio.microsoft.com/) before installing Intel oneAPI.
+- CMD: `"C:\Program Files (x86)\Intel\oneAPI\setvars.bat"`
+- Powershell: `cmd.exe "/K" '"C:\Program Files (x86)\Intel\oneAPI\setvars.bat" && powershell'`
 
-# Python
+You need to install `Desktop development with C++` in [Visual Studio](https://visualstudio.microsoft.com/) before installing Intel oneAPI.
+
+## Python
 
 Install [Miniconda](https://docs.anaconda.com/miniconda/)
 
-# Julia
+## Julia
 
 Install [Julia](https://julialang.org/downloads/)
 
-If you use julia in Anaconda prompt in Windows, you may need to create a separate environment for Julia where `SSL_CERT_FILE` is removed using `conda env config vars set SSL_CERT_FILE=`. If not, you may see `GitError(Code:ERROR, ...` error when adding packages.
+If you use julia in Anaconda prompt, you may need to create a separate environment for Julia where `SSL_CERT_FILE` is removed using `conda env config vars set SSL_CERT_FILE=`. If not, you may see `GitError(Code:ERROR, ...` error when adding packages.
