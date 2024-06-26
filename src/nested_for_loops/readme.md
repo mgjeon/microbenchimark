@@ -3,7 +3,7 @@ Windows 11 (23H2), PowerShell, AMD Ryzen 5 5600X, NVIDIA RTX 3060
 
 [setup](env.md)
 
-# Psuedo Code
+# Pseudo Code
 
 ```
 Program NestedLoops
